@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Delegate-->
@@ -11,54 +10,19 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodPoint" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="E6F-hA-sgu"/>
-                        <viewControllerLayoutGuide type="bottom" id="KHV-k3-xey"/>
+                        <viewControllerLayoutGuide type="top" id="urY-VJ-VF5"/>
+                        <viewControllerLayoutGuide type="bottom" id="soy-BK-3lP"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3Pb-gd-hyh" customClass="MGLMapView">
+                    <view key="view" contentMode="scaleToFill" id="4Fp-mB-2Du" customClass="MGLMapView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0lJ-lc-V1k">
-                                <rect key="frame" x="20" y="28" width="520" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1cg-or-CkY">
-                                <rect key="frame" x="20" y="76" width="520" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="storeAddress:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Xot-RA-BrP"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTa-6J-sXG">
-                                <rect key="frame" x="440" y="119" width="100" height="30"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Trial">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="0lJ-lc-V1k" firstAttribute="leading" secondItem="3Pb-gd-hyh" secondAttribute="leadingMargin" constant="12" id="Js2-tC-FYd"/>
-                            <constraint firstItem="1cg-or-CkY" firstAttribute="leading" secondItem="3Pb-gd-hyh" secondAttribute="leadingMargin" constant="12" id="Xhi-Az-9MX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0lJ-lc-V1k" secondAttribute="trailing" constant="12" id="XyB-CP-jND"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BTa-6J-sXG" secondAttribute="trailing" constant="12" id="b6s-hf-HUU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1cg-or-CkY" secondAttribute="trailing" constant="12" id="cgM-py-1Vt"/>
-                        </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="showsUserLocation" value="YES"/>
-                        </userDefinedRuntimeAttributes>
                         <connections>
-                            <outlet property="delegate" destination="BYZ-38-t0r" id="cKW-fQ-SZL"/>
+                            <outlet property="delegate" destination="BYZ-38-t0r" id="yP2-ET-k5i"/>
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="locationB" destination="1cg-or-CkY" id="tJa-GG-oja"/>
-                        <outlet property="mapView" destination="3Pb-gd-hyh" id="udv-Kd-7fm"/>
+                        <outlet property="mapView" destination="4Fp-mB-2Du" id="e6J-b4-m5J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
