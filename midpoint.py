@@ -33,7 +33,7 @@ def findMidPlace(a, b, c, d):
 
 	newLocation = geolocator.reverse(midpointLocation)
 	#print newLocation
-	data = places.search(c).geo(circle(midpointLat, midpointLong, d)).limit(5).data()
+	data = places.search(c).geo(circle(midpointLat, midpointLong, d)).limit(10).data()
 	clean = json.dumps([{'name': x['name'], 'address': x['address'], 'tel': x['tel']} for x in data],indent=2, sort_keys=True)
 	print clean
 findMidPlace(a,b,c,500)
