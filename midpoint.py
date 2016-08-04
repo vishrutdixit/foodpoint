@@ -3,6 +3,15 @@ import decimal
 from factual import Factual
 from factual.utils import circle
 import json
+from datetime import date
+import calendar
+
+my_date = date.today()
+my_day = calendar.day_name[my_date.weekday()]
+my_day = my_day.lower()
+
+
+
 
 factual = Factual('OAwHffzwwkan9LpstDBhOGOGmit7plcERqZpvE2J', 'gw28zCrtijknGrGDm9dVzC1v8HyFHi0HbEtGacL7', timeout=10.0)
 s = factual.table('places').schema()
@@ -32,8 +41,11 @@ def findMidPlace(a, b, c, d):
 	midpointLocation = strMidpointLat + ", " + strMidpointLong
 
 	newLocation = geolocator.reverse(midpointLocation)
-	#print newLocation
+
 	data = places.search(c).geo(circle(midpointLat, midpointLong, d)).limit(10).data()
-	clean = json.dumps([{'name': x['name'], 'address': x['address'], 'tel': x['tel']} for x in data],indent=2, sort_keys=True)
+
+
+	clean = json.dumps([{'Name': x['name'], 'Address': x['address'], 'Tel': x['tel'], 'Timings':x['hours'][my_day][0][0]+' - ' + x['hours'][my_day][0][1]} for x in data],indent=2, sort_keys=True)
+
 	print clean
 findMidPlace(a,b,c,500)
